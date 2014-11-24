@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* CSS - May or may not be a hot mess. DON'T JUDGE ME. */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
+@import url(http://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
+
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration:none;
+	color:#093;
+}
+a:hover {
+	color:#9966CC;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+from {
+opacity:0;
+}
+to {
+	opacity:1;
+}
+}
+@-moz-keyframes fadeIn {
+from {
+opacity:0;
+}
+to {
+	opacity:1;
+}
+}
+@keyframes fadeIn {
+from {
+opacity:0;
+}
+to {
+	opacity:1;
+}
+}
+#head {
+	cursor:pointer;
+	margin:5px;
+	padding-bottom:1px;
+	z-index:10;
+	width:100px;
+	height:100px;
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+#me {
+	font-size:1em;
+	clear:both;
+	font-size:1.0em;
+	/*font-family: 'Lato', sans-serif; font-weight: 100;*/
+	font-family: 'Averia Gruesa Libre', cursive;
+	display:none;
+	margin:-90px 50px 0 120px;
+	width:1100px;
+	color:#639;
+}
+#home {
+	background: #FFF;
+	min-height: 600px;
+	height: 600px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size:3.4em;
+}
+#img {
+}
+#home article {
+	height: 458px;
+	position: absolute;
+	text-align: center;
+	top:10px;
+	width: 100%;
+}
+#reason1 {
+	background: url(../img/explore.jpg) 50% 0 no-repeat fixed;
+	background-size:cover;
+	min-height: 800px;
+	height: 800px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+.title {
+	height: 458px;
+	position: absolute;
+	text-align: left;
+	color:#fff;
+	top: 50px;
+	left:100px;
+	width: 100%;
+	font-family: 'Averia Gruesa Libre', cursive;
+	font-size:5.1em;
+	cursor:pointer;
+}
+#reason2 {
+	background: url(../img/friends.jpg) 50% 0 no-repeat fixed;
+	background-size:cover;
+	min-height: 800px;
+	height: 800px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+#reason3 {
+	background: url(../img/creative.jpg) 50% 0 no-repeat fixed;
+	background-size:cover;
+	min-height: 1000px;
+	height: 1000px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+#conclusion {
+	background: #fff;
+	min-height: 500px;
+	height: 500px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+#top {
+	position:fixed;
+	bottom:0;
+	right:0;
+	float:right;
+	cursor:pointer;
+	z-index:10;
+}
+a.swap {
+	background-image:url(img/to1.jpg);
+	width:354px;
+	height:353px;
+}
+a.swap:hover {
+	background-image:url(img/to2.jpg);
+	width:354px;
+	height:353px;
+}
+.secondary {
+	display:none;
+	font-size:18px;
+	text-align: left;
+	margin:0 0 0 100px;
+	top:200px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size:2em;
+	position:relative;
+	background-color: rgb(255, 255, 255);
+	/* RGBa with 0.6 opacity */
+background-color: rgba(255, 255, 255, 0.8);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF, endColorstr=#FFF);
+	/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	width:900px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	padding:20px;
+}
+#smallfont {
+	font-size:1em;
+	text-align: center;
+	top:100px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	position:relative;
+}
+.third {
+	font-size:2.5em;
+	text-align: center;
+	top:60px;
+	bottom:50px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size:2em;
+	position:relative;
+}
+#hint {
+	font-size:10px;
+	text-align: left;
+	margin:0 0 0 100px;
+	top:200px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size:2em;
+	position:relative;
+	color:#FFFFFF;
+}
+
